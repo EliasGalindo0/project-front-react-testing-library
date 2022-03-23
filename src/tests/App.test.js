@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
 import App from '../App';
 
-describe('Teste se o topo da aplicação contém um conjunto fixo de links de navegação.',
+describe('1. Teste se o topo da aplicação contém um conjunto fixo de links de navegação.',
   () => {
     test('Teste se o link contém o texto `Home`.',
       () => {
