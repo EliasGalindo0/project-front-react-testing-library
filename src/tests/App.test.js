@@ -4,23 +4,23 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
 import App from '../App';
 
-describe('1. Teste se o topo da aplicação contém um conjunto fixo de links de navegação.',
+describe('1. Testa se o topo da aplicação contém um conjunto fixo de links de navegação.',
   () => {
-    test('Teste se o link contém o texto `Home`.',
+    test('Testa se o link contém o texto `Home`.',
       () => {
         renderWithRouter(<App />);
         const linkHome = screen.getByText(/Home/i);
         expect(linkHome).toBeInTheDocument();
       });
 
-    test('Teste se o link contém o texto `About`.',
+    test('Testa se o link contém o texto `About`.',
       () => {
         renderWithRouter(<App />);
         const linkAbout = screen.getByText(/About/i);
         expect(linkAbout).toBeInTheDocument();
       });
 
-    test('Teste se o link contém o texto `Favorite Pokémons`.',
+    test('Testa se o link contém o texto `Favorite Pokémons`.',
       () => {
         renderWithRouter(<App />);
         const linkFavorite = screen.getByText(/Favorite Pokémons/i);

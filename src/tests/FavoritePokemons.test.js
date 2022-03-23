@@ -1,9 +1,9 @@
-import { render, screen } from '@testing-library/react';
 import React from 'react';
+import { render, screen } from '@testing-library/react';
 import { FavoritePokemons } from '../components';
 
-describe('3. Teste o componente <FavoritePokemons.js />', () => {
-  test('Teste se é exibido: `No favorite pokemon found`, caso não tenha favoritos.',
+describe('3. Testa o componente <FavoritePokemons.js />', () => {
+  test('Testa se é exibido: `No favorite pokemon found`, caso não tenha favoritos.',
     () => {
       render(<FavoritePokemons />);
 
@@ -11,7 +11,7 @@ describe('3. Teste o componente <FavoritePokemons.js />', () => {
       expect(messageNotFound).toBeVisible();
     });
 
-  test('Teste se é exibido todos os cards de pokémons favoritados.',
+  test('Testa se é exibido todos os cards de pokémons favoritados.',
     () => {
       render(<FavoritePokemons />);
 
@@ -19,8 +19,3 @@ describe('3. Teste o componente <FavoritePokemons.js />', () => {
       expect(favoritePokemons).toBeVisible();
     });
 });
-
-// 3. Teste o componente <FavoritePokemons.js />
-// Teste se é exibido na tela a mensagem No favorite pokemon found, se a pessoa não tiver pokémons favoritos.
-
-// Teste se é exibido todos os cards de pokémons favoritados.

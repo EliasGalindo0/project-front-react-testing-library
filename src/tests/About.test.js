@@ -2,22 +2,22 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { About } from '../components';
 
-describe('2. Teste o componente <About.js />.', () => {
-  test('Teste se a página contém as informações sobre a Pokédex.',
+describe('2. Testa o componente <About.js />.', () => {
+  test('Testa se a página contém as informações sobre a Pokédex.',
     () => {
       render(<About />);
       const informations = screen.getByText(/This application simulates a Pokédex.../i);
       expect(informations).toBeInTheDocument();
     });
 
-  test('Teste se a página contém um heading h2 com o texto About Pokédex.',
+  test('Testa se a página contém um heading h2 com o texto About Pokédex.',
     () => {
       render(<About />);
       const headingH2 = screen.getByRole('heading', { name: 'About Pokédex' });
       expect(headingH2).toBeInTheDocument();
     });
 
-  test('Teste se a página contém dois parágrafos com texto sobre a Pokédex.',
+  test('Testa se a página contém dois parágrafos com texto sobre a Pokédex.',
     () => {
       render(<About />);
       const text1 = screen.getByText(/This application simulates a Pokédex.../i);
@@ -26,7 +26,7 @@ describe('2. Teste o componente <About.js />.', () => {
       expect(text2).toBeInTheDocument();
     });
 
-  test('Teste se a página contém a imagem de uma Pokédex.',
+  test('Testa se a página contém a imagem de uma Pokédex.',
     () => {
       render(<About />);
       const image = screen.getByAltText('Pokédex');
